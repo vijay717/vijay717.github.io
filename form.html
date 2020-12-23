@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<title>The Jumpin Juice Company</title>
+	</head>
+
+	<body>
+		<header>
+			<h1>   <span> The Jumpin' Juice Company </span>  -  Sign Up For Our Mailing List Today!</h1>
+			<nav>
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="contact.html">Contact</a></li>
+					<li><a id = "active" href="form.html">Mailing List Signup</a></li>
+					<li><a href="location.html">Store Locations</a></li>
+					<li><a href="questions.html">FAQ</a></li>
+					<li><a href="how_to.html">How To</a></li>
+				</ul>
+			</nav>
+		</header>
+		<section>
+			<article>
+				<h2>Sign Up and Recieve a Coupon For a Free Drink</h2>
+				<figure>
+					<img id = "coupon" src = "Tickets.jpg" alt = "ticket"/>
+					<figcaption id = "date"></figcaption>
+				</figure>
+				
+				<script>
+					var d = new Date();
+					document.getElementById("date").innerHTML = d.toDateString();
+				</script>
+
+				<form action="coupon.html" method = "post" target="_blank">
+					<fieldset>
+						<legend>Form:</legend><br><br>
+						First name:<br>
+    						<input type="text" name="firstname" value="" required><br><br>
+    						Last name:<br>
+    						<input type="text" name="lastname" value="" required><br><br>
+    						E-mail:<br>
+						<input type="text" name="mail" value="" required><br><br>
+    						Age:<br>
+						<input type="text" name="age" value="" required><br><br>					
+    						Gender:<br>
+						<input type="text" name="gender" value="" required><br><br>
+						<input class = "button" type="submit" value="Submit" required>
+						<input class = "button" type="reset" value="Reset" required>
+  					</fieldset>
+				</form>
+			</article>
+
+			<aside>
+				<h2>Click Image For Details</h2>
+				<figure>
+					<a href="acai_berry.html" target="_blank"><img src= "acaijberryjuice.jpg" alt="thumbnail"/></a>
+					<figcaption>Acai Berry Juice 25% Off Discount</figcaption>
+				</figure>
+				<figure>
+					<a href="cranberry.html" target="_blank"><img src= "Cranberry-Juice-Tea.jpg" alt="thumbnail"/></a>
+					<figcaption>Our All New Cranberry Juice Tea</figcaption>
+				</figure>
+				<figure>
+					<a href="berry_madness.html" target="_blank"><img src= "berrymadness.jpg" alt="thumbnail"/></a>
+					<figcaption>Buy 1 Get 1 Free</figcaption>
+				</figure>	
+			</aside>
+		</section>
+		<footer>
+			<p>Copyright © 2016 Jumpin' Juice Company</p>
+		</footer>
+	</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ticket</title>
+	<style type = "text/css">
+		body	{text-align:center;}
+		img	{max-width: 100%;}
+	</style>
+</head>
+
+<body>
+	<h1>Print This Coupon And Use At Any Store</h1>
+	<figure>
+		<img id = "coupon" src = "Tickets.jpg" alt = "ticket"/>
+		<figcaption id = "date"></figcaption>
+	</figure>
+				
+	<script>
+		var d = new Date();
+		document.getElementById("date").innerHTML = d.toDateString();
+	</script>
+</body>
+</html>
