@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+	<head>
+		<title>Area Game</title>
+		
+	</head>
+	
+	<body>
+		<script type = "text/javascript">
+			//Window property 4
+			
+			window.name = "Area of a Circle Game";
+			alert("This is the " + window.name + "!");
+			alert("The game will provide you with a radius of a circle and you have to calculate the area. Round to the nearest whole number. \nAt the end, you will recieve your score.");
+			var stay = true;
+			var correct = 0;
+			var total = 0;
+			while(stay===true) {
+				var radius = Math.floor(Math.random() * 20) + 1;
+				var answer = prompt("The radius is " + radius + " . What is the area? ");
+				var area = Math.round(Math.PI * (radius * radius)); //Math Property 1
+				if(answer==area){
+					alert("That is correct!");
+					correct++;
+				}
+				
+				else 
+					alert("Sorry, that was incorrect. The answer was " + area + ", also written as " + area.toExponential()); // Number Method 1
+				
+				if(answer > Number.MAX_VALUE) // Math Property 1
+					alert("For future reference, your answer was much larger than any area we would ask for.");
+				total++;
+				stay = confirm("Do you wish to keep playing?");	
+			}
+			var score = Math.round(correct / total * 100);
+			alert("You got " + correct + " out of " + total + " correct. That is a score of " + score + "%.");
+			window.close();
+		</script>
+	</body>
+</html>
