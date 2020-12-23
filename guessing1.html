@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+	<head>
+		<title>Guessing Game</title>
+		
+	</head>
+	
+	<body>
+		<script type = "text/javascript">
+			
+		alert("Welcome to the guessing Game!\n\nYou will have to guess a number between 1 and 100 and will receive hints based on your guess.");
+		alert("The hints are:\n\nTerrible = Off by more than 75\nBad = Off by more than 50\nDecent = Off by more than 25\nAlmost = Off by less than 25");
+		alert("The grading system is: \n\nGenius = less than 3 guesses\nBoss = Between 3-5 guesses\nPro = Between 5-10 guesses\nAverage Joe = Between 10-15 guesses\nNoob = More than 15 guesses");
+		alert("Let's Start!");
+
+		var round = 0;
+		var guess = 0;
+		var number = Math.floor(Math.random()*100) + 1;
+		do {
+			round++;
+			guess = prompt("Guess #" + round + ": ");
+
+			if(guess!=number){
+				if((number - guess) > 75)
+					alert("That was a terrible guess! Way too low.");
+				else if((number - guess) < -75)
+					alert("That was a terrible guess! Way too high.");
+				else if((number - guess) > 50)
+					alert("That was a bad guess! Too low.");
+				else if((number - guess) < -50)
+					alert("That was a bad guess! Too high.");
+				else if((number - guess) > 25)
+					alert("That was a decent guess. But too low.");
+				else if((number - guess) < -25)
+					alert("That was a decent guess. But too high.");
+				else if((number - guess) > 0)
+					alert("Oooh, almost right, but a little too low!");
+				else if((number - guess) < 0)
+					alert("Oooh, almost right, but a little too high!");
+
+			}
+		} while(guess!= number);
+
+		alert("You got it!\nSince it took you " + round + " guesses, you are ... ");
+		if(round>15)
+			alert("A Genius!");
+		else if(round>=10)
+			alert("A Boss!");
+		else if(round>=5)
+			alert("A Pro!");
+		else if(round>3)
+			alert("An Average Joe!");
+		else if(round>0)
+			alert("A Noob!");
+
+		window.close();
+		</script>
+	</body>
+</html>

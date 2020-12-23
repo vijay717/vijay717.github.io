@@ -1,0 +1,76 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: #FFFFFF;
+    font-size: 65%;
+    font-family: arial;
+} #wrapper {
+    font-size: 1.4em;
+    width: 100%;
+    text-align: left;
+    margin: 0;
+} #header {
+    background: #cec9fc;
+    padding: 5px 3px;
+    color: #FFFFCC;
+    min-width: 42em;
+} #navbar {
+    background: #008080;
+    padding: 0;
+    width: 100%;
+    min-width: 53em;
+    color: #FFFFFF;
+	font-family: tahoma;
+	font-weight: bold;
+} #content-wrapper {
+    background: #e5e1f9;
+    width: 100%;
+} #content-inner {
+    padding: 5px 35px 0 15px;
+	border-bottom: dotted 1px #000000;
+} #navfill {
+    clear: both;
+}
+
+ul.nav {
+    padding: 0;
+    margin: 0;
+    float: left;
+	background-color:#008080;
+    color: #FFFFFF;
+    border-left: solid 1px #000000;
+}
+
+ul.nav li {
+    display: inline;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+ul.nav li a {
+    padding: .2em 1em;
+    background-color:#008080;
+    color: #FFFFFF;
+    text-decoration: none;
+    float: left;
+    border-top: solid 1px #000000;
+    border-right: solid 1px #000000;
+}
+
+ul.nav li a:link, ul.nav li a:visited {
+    color: #FFFFFF;
+}
+
+ul.nav li a:hover {
+    background-color: #000000;
+} 
+
+ #nav-home a, #nav-page1 a, #nav-page2 a, #nav-page3 a, #nav-page4 a, #nav-page5 a, #nav-page6 a, #nav-page7 a, #nav-page8 a  {
+    background: #e5e1f9;
+    color: #000000;
+} 
+#nav a:active {
+    background: #e5e1f9;
+    color: #000000;
+}
