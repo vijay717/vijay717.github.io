@@ -10,18 +10,18 @@ function getCookie(cname) {
 	var name = cname + "=";
     	var decodedCookie = decodeURIComponent(document.cookie);
     	var ca = decodedCookie.split(';'); //String Method 2
-    	
+
 	for(var i = 0; i < ca.length; i++) {
         	var c = ca[i];
         	while (c.charAt(0) == ' ') {
         	        c = c.substring(1);
         	}
-        	
+
 		if (c.indexOf(name) == 0) {
             		return c.substring(name.length, c.length);
         	}
     	}
-    	
+
 	return "";
 }
 
@@ -29,12 +29,13 @@ function checkCookie() {
     	user=getCookie("username");
    	if (user !== "") {
   		alert("Welcome back " + user + "!");
-    	} 
-	
+    	}
+
 	else {
        		user = prompt("Please enter your name:","");
        		if (user != "" && user != null) {
         		setCookie("username", user, 30);
+            alert("Welcome " + user + "!");
        		}
     	}
 }
@@ -45,7 +46,7 @@ function password() {
 	if(document.cookie == ""){ //If the user returns to the homepage, they won't have to repeat password
 		while(exit!==-1){
 			//Window methods 1-2, property 2
-			var password = prompt("Please enter the password"); //Correct password : javascript
+			var password = prompt("Please enter the password (password is 'javascript')"); //Correct password : javascript
 			if (password === "") {
 				alert("Please enter all data!");
 			}
@@ -58,7 +59,7 @@ function password() {
 				exit = -1;
 				checkCookie();
 			}
-		
+
 			//History Method 1 and Property 1, Window Property 3-4
 			if(wrong === 5) {
 				alert("Too many failed attempts! You will now be redirected from our page.");
@@ -68,10 +69,10 @@ function password() {
 					window.location.assign("https://www.google.com/");
 				exit = -1;
 			}
-	
+
 		}
 	}
-	
+
 	else
 		checkCookie(); //Welcomes them back to page
 }
