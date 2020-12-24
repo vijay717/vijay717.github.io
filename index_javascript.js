@@ -58,6 +58,7 @@ function password() {
 				alert("Welcome to Our Homepage!");
 				exit = -1;
 				checkCookie();
+        document.getElementById("home").style.visibility = 'visible';
 			}
 
 			//History Method 1 and Property 1, Window Property 3-4
@@ -69,7 +70,6 @@ function password() {
 					window.location.assign("https://www.google.com/");
 				exit = -1;
 			}
-
 		}
 	}
 
