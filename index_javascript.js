@@ -29,6 +29,7 @@ function checkCookie() {
     	user=getCookie("username");
    	if (user !== "") {
   		alert("Welcome back " + user + "!");
+        document.getElementById("home").style.visibility = 'visible';
     	}
 
 	else {
